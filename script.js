@@ -1,7 +1,7 @@
 
 function handleProduct(product, isIncrease){
     const productInput = document.getElementById(product+'-count');
-    const productCount = parseInt(productInput.value);
+    const productCount = getInput(product);
     let productNewCount = productCount;
     if(isIncrease == true){
         productNewCount = productCount + 1;
