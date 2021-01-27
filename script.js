@@ -23,11 +23,14 @@ function handleProduct(product, isIncrease){
 }
 //total calculation
 function calculateTotal(){
-    const phoneInput = document.getElementById('phone-count');
-    const phoneCount = parseInt(phoneInput.value);
-
-    const caseInput = document.getElementById('case-count');
-    const caseCount = parseInt(caseInput.value);
+    const phoneCount = getInput('phone');
+    const caseCount = getInput('case');
+    
     const subTotal = phoneCount * 1219 + caseCount * 59;
     document.getElementById('total-price').innerText ='$'+ subTotal;
+}
+function getInput(product){
+    const getProduct  = document.getElementById(product+'-count');
+    const productCount = parseInt(getProduct.value);
+    return productCount;
 }
