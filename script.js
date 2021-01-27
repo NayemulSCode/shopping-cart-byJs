@@ -1,11 +1,4 @@
 
-
-document.getElementById('phone-increase').addEventListener('click', function(){
-    handleProduct(true);
-})
-document.getElementById('phone-decrease').addEventListener('click', function(){
-    handleProduct(false);
- })
 function handleProduct(isIncrease){
     const phoneInput = document.getElementById('phone-count');
     const phoneCount = parseInt(phoneInput.value);
@@ -21,12 +14,6 @@ function handleProduct(isIncrease){
     document.getElementById('phone-total').innerText = '$'+ phoneTotal;
 }
 
-document.getElementById('case-increase').addEventListener('click', function(){
-    handleProducts(true);
-})
-document.getElementById('case-decrease').addEventListener('click', function(){
-    handleProducts(false);
-})
 function handleProducts(isIncrease){
     const caseInput = document.getElementById('case-count');
     const caseCount = parseInt(caseInput.value);
