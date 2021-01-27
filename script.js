@@ -25,9 +25,15 @@ function handleProduct(product, isIncrease){
 function calculateTotal(){
     const phoneCount = getInput('phone');
     const caseCount = getInput('case');
-    
+    //subtotal
     const subTotal = phoneCount * 1219 + caseCount * 59;
     document.getElementById('total-price').innerText ='$'+ subTotal;
+    //tax
+    const totalTax = Math.round(subTotal * 0.01);
+    document.getElementById('tax-amount').innerText = '$' + totalTax;
+    //grand total
+    const grandTotal = subTotal + totalTax;
+    document.getElementById('grand-total').innerText = '$' + grandTotal;
 }
 function getInput(product){
     const getProduct  = document.getElementById(product+'-count');
