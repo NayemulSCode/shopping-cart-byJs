@@ -40,16 +40,8 @@ function getInput(product){
     const productCount = parseInt(getProduct.value);
     return productCount;
 }
-//remove phone item
-document.getElementById('removePhone').addEventListener('click', function(){
-   removeItem('phone');
 
-})
-//remove case item
-document.getElementById('removeCase').addEventListener('click', function(){
-    removeItem('case');
- 
- })
+//remove item
  function removeItem(product){
     const removePhone = document.getElementById(product+'-item');
     document.getElementById(product+'-count').value = 0;
