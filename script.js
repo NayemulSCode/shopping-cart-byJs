@@ -42,11 +42,7 @@ function getInput(product){
 }
 //remove phone item
 document.getElementById('removePhone').addEventListener('click', function(){
-   const removePhone = document.getElementById('phone-item');
-    document.getElementById('phone-count').value = 0;
-    document.getElementById('phone-total').innerText = 0;
-    removePhone.style.display = 'none';
-    calculateTotal();
+   removeItem('phone');
 
 })
 //remove case item
