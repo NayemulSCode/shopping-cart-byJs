@@ -40,3 +40,24 @@ function getInput(product){
     const productCount = parseInt(getProduct.value);
     return productCount;
 }
+//remove phone item
+document.getElementById('removePhone').addEventListener('click', function(){
+   const removePhone = document.getElementById('phone-item');
+    document.getElementById('phone-count').value = 0;
+    document.getElementById('phone-total').innerText = 0;
+    removePhone.style.display = 'none';
+    calculateTotal();
+
+})
+//remove case item
+document.getElementById('removeCase').addEventListener('click', function(){
+    removeItem('case');
+ 
+ })
+ function removeItem(product){
+    const removePhone = document.getElementById(product+'-item');
+    document.getElementById(product+'-count').value = 0;
+    document.getElementById(product+'-total').innerText = 0;
+    removePhone.style.display = 'none';
+    calculateTotal();
+ }
