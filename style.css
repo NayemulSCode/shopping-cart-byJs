@@ -53,3 +53,8 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
+/* custom css */
+.inputSmall{
+	background-color: aquamarine;
+	align-items: center;
+}
